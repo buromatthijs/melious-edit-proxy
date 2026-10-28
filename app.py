@@ -24,7 +24,7 @@ from fastapi.responses import JSONResponse, Response
 MELIOUS_BASE_URL = os.getenv("MELIOUS_BASE_URL", "https://api.melious.ai/v1").rstrip("/")
 TIMEOUT = float(os.getenv("TIMEOUT_SECONDS", "180"))
 # "raw" = plain base64, "dataurl" = data:image/png;base64,...
-INPUT_IMAGE_FORMAT = os.getenv("INPUT_IMAGE_FORMAT", "raw")
+INPUT_IMAGE_FORMAT = os.getenv("INPUT_IMAGE_FORMAT", "dataurl")
 # Optional: "png", "jpeg" or "webp". Empty = provider default (JPEG for FLUX).
 OUTPUT_FORMAT = os.getenv("OUTPUT_FORMAT", "")
 DEFAULT_EDIT_MODEL = os.getenv("DEFAULT_EDIT_MODEL", "flux-2-klein-9b")
